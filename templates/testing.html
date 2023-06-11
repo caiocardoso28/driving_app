@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Marker on Map Click</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=geometry&callback=initMap"
+    async defer></script>
+
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body onload="initMap()">
+    <h3>Click on the map to add a marker</h3>
+    <center><input type="number" id="routeId">
+
+    <button onclick="getRoute()">Search</button>
+    </center>
+    <div id="map"></div>
+    <center><button onclick="calculateRoute()" style="margin-top: 10px">Calculate Route</button></center>
+
+  </body>
+  <script src="{{url_for('static', filename='actions.js')}}"></script>
+</html>
